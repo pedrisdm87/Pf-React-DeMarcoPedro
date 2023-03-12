@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+  }
+  
+  .barraLogo {
+    background-color: #2D3142;
+    margin-left: 0px;
+  }
+  
+  h1 {
+    display: inline-flex;
+    color: whitesmoke;
+    text-align: left;
+    font-size: 4rem;
+    margin:auto;
+  }
+  
+  @media screen and (max-width: 695px) {
+    h1 {
+      
+      font-size: 4rem;
+    }
+  }
+  h2 {
+    font-size: 3rem;
+  }
+  
+  a {
+    text-decoration: none;
+    font-size: 3rem;
+    color: whitesmoke;
+  }
+  
+  @media screen and (max-width: 992px) {
+    a {
+      font-size: 3rem;
+    }
+  }
+  body {
+    background-color: whitesmoke;
+  }
+  
+  header {
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+    text-align: center;
+  }
+  
+  @media screen and (max-width: 576px) {
+    header h1 {
+      margin-right: 1rem;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      margin-inline: auto;
+      width: 90%;
+    }
+  }
+  header li {
+    display: inline-flex;
+    margin-inline: 3rem;
+  }
+  
+  @media screen and (max-width: 1140px) {
+    header li {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  header li :hover {
+    color: #ef8354;
+    transition: 0.5s;
+  }
+
+  header ul{
+    display: flex;
+    place-items: center;
+  }
