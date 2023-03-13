@@ -12,7 +12,7 @@ function App() {
       <header>
         
         <NavBar></NavBar>
-        <ItemListContainer titulo = "Aqui iran las cards"></ItemListContainer>
+        <ItemListContainer titulo = "Sitio en construcción..."></ItemListContainer>
 
         {/* Link navbar (con logo li-s y carrito con numero hC) y link item list container */}
 
