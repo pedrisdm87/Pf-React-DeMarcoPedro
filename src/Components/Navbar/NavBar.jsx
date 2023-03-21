@@ -9,12 +9,12 @@ function NavBar(props) {
                 <div className='container'>   
                 <ul>
                     <img src={logo} alt="Logo" className='animate__animated animate__flip' />
-                    <li><link to="/">Inicio</link></li>
-                    <li><link to="">Servicios</link> </li>
-                    <li><link to="">Nosotros</link></li>
-                    <li><link to="">Contacto</link></li>
-                    <li><link to="">Productos</link></li>
-                    <li><link to="">Encontranos</link></li>
+                    <li><Link to="/">Inicio</Link></li>
+                    <li><Link to="">Servicios</Link> </li>
+                    <li><Link to="">Nosotros</Link></li>
+                    <li><Link to="">Contacto</Link></li>
+                    <li><Link to="">Productos</Link></li>
+                    <li><Link to="">Encontranos</Link></li>
                     <li><CartWidget/></li> 
                 </ul>        
                 </div>
