@@ -2,23 +2,29 @@ import NavBar from './Components/Navbar/NavBar';
 import ItemListContainer from './Components/ItemListContainer/ItemListContainer';
 import itemListContainer from './Components/ItemListContainer/itemListContainer.css';
 import navBar from './Components/Navbar/navBar.css';
-/* Importar navbar y link container */
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 
 
 function App() {
   return (
-    <div>
-      <header>
+    <BrowserRouter>
+    <NavBar/>
+    <Routes>
+      <Route path="/" element= { <itemListContainer/>}/>
+       
+      
+      {/* <header>
         
-        <NavBar></NavBar>
+        
         <ItemListContainer titulo = "Sitio en construcción..."></ItemListContainer>
 
-        {/* Link navbar (con logo li-s y carrito con numero hC) y link item list container */}
+        
 
-      </header>
+      </header> */}
 
-    </div>
+      </Routes>
+    </BrowserRouter>
   )
 
 }
