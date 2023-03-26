@@ -14,14 +14,7 @@ function App() {
       <Route path="/" element= { <ItemListContainer/>}/>
        
       
-      {/* <header>
-        
-        
-        <ItemListContainer titulo = "Sitio en construcción..."></ItemListContainer>
-
-        
-
-      </header> */}
+      
 
       </Routes>
     </BrowserRouter>
