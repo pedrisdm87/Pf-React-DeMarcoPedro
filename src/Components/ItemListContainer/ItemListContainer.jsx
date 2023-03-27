@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Flex from "../Flex/Flex";
 import Item from "../Item/Item";
-import imagenes from "../img/imagenes";
 import products from "../data/productos"
 
 function getItems() {
@@ -15,11 +14,17 @@ function getItems() {
 
 function ItemListContainer() {
 
-  const [products, setProducts] = useState([])
 
-  getItems().then((respuesta) =>{
-    setProducts(respuesta)
-});
+  const [products, setProducts] = useState([]);
+
+  useEffect(
+    ()=>{
+      getItems().then((respuesta) =>{
+        setProducts(respuesta);
+    });
+  },
+  []
+)
   
   return (    
       <Flex>
