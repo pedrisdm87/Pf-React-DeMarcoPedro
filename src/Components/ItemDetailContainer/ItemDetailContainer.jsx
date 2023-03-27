@@ -7,32 +7,34 @@ import { useParams } from "react-router-dom";
 
 
 function getSingleItem(idURL) {
-    const promesa = new Promise((resolve, reject) => {
-        setTimeout(()=>{ 
-            const itemRecuested = products.find( item =>{
+    const promesa = new Promise((resolve, reject)=>{
+        setTimeout(
+        ()=>{ 
+            const encontrado = products.find( item =>{
                 return (item.id=== Number(idURL))
             })
-            resolve(itemRecuested)
+            resolve(encontrado)
         },1000) 
-    });
+    })
 
     return promesa;
 }
 
 
 
-function ItemDetailContainer() {
+function ItemDetailContainer(params) {
     const [product, setProduct] = useState([]);
 
     let { id } = useParams();
 
-    useEffect(()=>{
+    useEffect(
+        ()=>{
           getSingleItem(id).then((respuesta) =>{
             setProduct(respuesta);
         });
-      }, []);
-
-
+      },
+      []
+    )
 return(
     <div>
         <Flex>

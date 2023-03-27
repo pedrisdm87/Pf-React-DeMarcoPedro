@@ -15,7 +15,7 @@ function App() {
       
             <Route path="/" element= {<p>Aca deberia ir el componente HOME</p>} />
             <Route path="/Productos" element= { <ItemListContainer/>}/>
-            <Route path="/detalle/:id" element={ <ItemDetailContainer/> } />
+            <Route path="/productos/:id" element={ <ItemDetailContainer/> } />
 
       </Routes>
     </BrowserRouter>

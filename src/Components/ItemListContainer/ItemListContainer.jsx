@@ -36,6 +36,7 @@ function ItemListContainer() {
             detalle={producto.detalle}
             imagen={producto.imagen}
             categoria={producto.categoria}
+            id={producto.id}
           />
         ))};
       </Flex>

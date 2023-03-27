@@ -6,23 +6,9 @@ import imagenes from "../img/imagenes"
   
 
 export default function Item(props) {
-const [fav, setFav] = useState(false);
-
-  function handleFavorite(evt) {
-    evt.preventDefault()
-    setFav(!fav);
-  }
-
-  let classNameFavorite;
-
-  if (fav === true) {
-    classNameFavorite = "item-card_favicon favorite";
-  } else {
-    classNameFavorite = "item-card_favicon";
-  }
 
   return (
-    <Link to={`/detalle/${props.detalle}`}>
+    
       <div id={props.id} className="item-card">
         
         <div className="item-card_header">
@@ -36,11 +22,11 @@ const [fav, setFav] = useState(false);
           <h4>$ {props.precio}</h4>
           <small>{props.categoria}</small>
         </div>
-        <Link to='/detalle/${producto.id}'>
+        <Link to={`/detalle/${props.id}`}>
         <Button>Ver detalle</Button>
         </Link>  
       </div>
-    </Link>
+    
   );
 }
 
