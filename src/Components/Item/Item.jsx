@@ -2,10 +2,11 @@ import "./item.css";
 import { useState } from "react";
 import Button from "../Button/Button";
 import { Link } from "react-router-dom";
-import imagenes from ""
+import imagenes from "../img/imagenes"
+  
 
-function Item(props) {
-  const [fav, setFav] = useState(false);
+export default function Item(props) {
+const [fav, setFav] = useState(false);
 
   function handleFavorite(evt) {
     evt.preventDefault()
@@ -28,7 +29,7 @@ function Item(props) {
           <h2>{props.detalle}</h2>
         </div>
         <div className="item-card_img">
-          <img src={props.img} alt="imagen"></img>
+          <img src={props.imagen} alt="imagen"></img>
         </div>
 
         <div className="item-card_detail">
@@ -42,4 +43,3 @@ function Item(props) {
   );
 }
 
-export default Item;

@@ -56,6 +56,7 @@ a{
   .item-card_detail .h4{
     height: 140px;
     padding: 12px 8px;
+    color: red;
   }
   
   .item-card:hover .item-card_favicon{
@@ -93,10 +94,10 @@ a{
   
   small{
     color: #8c8c8e;
-    font-size: medium;
+    font-size: large;
   }
   
-  .item-card_price{
+  .item-card_detail{
     color: #444444;
     font-weight: bold;
   }
@@ -105,3 +106,4 @@ a{
     color:#2D3142;
     font-size: large;
   }
+  
