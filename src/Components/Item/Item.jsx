@@ -36,8 +36,9 @@ const [fav, setFav] = useState(false);
           <h4>$ {props.precio}</h4>
           <small>{props.categoria}</small>
         </div>
-
+        <Link to='/detalle/${producto.id}'>
         <Button>Ver detalle</Button>
+        </Link>  
       </div>
     </Link>
   );

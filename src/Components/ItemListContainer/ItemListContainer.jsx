@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect} from "react";
 import Flex from "../Flex/Flex";
 import Item from "../Item/Item";
 import products from "../data/productos"
 
 function getItems() {
   const promesa = new Promise((resolve)=>{
-    setTimeout(()=>{
-      resolve(products)
-    }, 2500);
+        setTimeout(()=>{
+        resolve(products)
+    }, 1000);
   });
   return promesa;  
 }
@@ -42,4 +42,4 @@ function ItemListContainer() {
   );
 }
 
-export default ItemListContainer;
+export default ItemListContainer; 

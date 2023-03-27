@@ -6,7 +6,8 @@ const products = [
       precio: 300000,
       cantidad: 1,
       categoria:"Tubos",
-      imagen: "https://i.ibb.co/CMvgFqZ/tubo.jpg"
+      imagen: "https://i.ibb.co/CMvgFqZ/tubo.jpg",
+      descripcion:"Tubo Láser Co2 RECI. Para Máquinas Pantógrafos de Corte y Grabado Láser.",
     },
     {
       nombre: "Controladora 6445",
@@ -15,7 +16,8 @@ const products = [
       precio:220000,
       cantidad:1,
       categoria:"Controladoras",
-      imagen: "https://i.ibb.co/n1h0cKQ/controladora.jpg"
+      imagen: "https://i.ibb.co/n1h0cKQ/controladora.jpg",
+      descripcion:"Controladora y Display Ruida 6445 para equipos CNC Láser.",
   },
   {
       nombre: "Lente D.Foc. 101mm",
@@ -24,7 +26,8 @@ const products = [
       precio:15000,
       cantidad:"1",
       categoria:"Lentes",
-      imagen: "https://i.ibb.co/Rp3ZCx8/lente.jpg"
+      imagen: "https://i.ibb.co/Rp3ZCx8/lente.jpg",
+      descripcion:"Lente para Pantógrafo Laser de CO2, II-VI una de las mejores marcas en lentes y espejos laser, la mejor del mercado.",
   },
   {
       nombre: "Fuente 100w",
@@ -33,7 +36,8 @@ const products = [
       precio:185000,
       cantidad:1,
       categoria:"Fuentes",
-      imagen: "https://i.ibb.co/CvCjDJh/fuente.webp"
+      imagen: "https://i.ibb.co/CvCjDJh/fuente.webp",
+      descripcion:"FUENTE ZYE PARA TUBO LASER. Para Máquinas Pantógrafos Láser de Corte, Marcado y Grabado",
   },
   {
       nombre: "Tubo 90W",
@@ -42,7 +46,8 @@ const products = [
       precio:200000,
       cantidad:1,
       categoria:"Tubos",
-      imagen: "https://i.ibb.co/CMvgFqZ/tubo.jpg"
+      imagen: "https://i.ibb.co/CMvgFqZ/tubo.jpg",
+      descripcion:"Tubo Láser Co2 RECI. Para Máquinas Pantógrafos de Corte y Grabado Láser.",
   },
   {
       nombre: "Controladora 6442",
@@ -51,7 +56,8 @@ const products = [
       precio:220000,
       cantidad:1,
       categoria:"Controladoras",
-      imagen: "https://i.ibb.co/VDVNXb9/controladora-2.jpg"
+      imagen: "https://i.ibb.co/VDVNXb9/controladora-2.jpg",
+      descripcion:"Controladora y Display Ruida 6442 para equipos CNC Láser.",
   },
   {
       nombre: "Lente D..76mm",
@@ -60,7 +66,8 @@ const products = [
       precio:15000,
       cantidad:1,
       categoria:"Lentes",
-      imagen: "https://i.ibb.co/Rp3ZCx8/lente.jpg"
+      imagen: "https://i.ibb.co/Rp3ZCx8/lente.jpg",
+      descripcion:"Lente para Pantógrafo Laser de CO2, II-VI una de las mejores marcas en lentes y espejos laser, la mejor del mercado.",
   },
   {
       nombre: "Fuente 90w",
@@ -69,7 +76,8 @@ const products = [
       precio:150000,
       cantidad:1,
       categoria:"Fuentes",
-      imagen: "https://i.ibb.co/CvCjDJh/fuente.webp"
+      imagen: "https://i.ibb.co/CvCjDJh/fuente.webp",
+      descripcion:"FUENTE ZYE PARA TUBO LASER. Para Máquinas Pantógrafos Láser de Corte, Marcado y Grabado",
   },
   {
       nombre: "Tubo 80W",
@@ -78,7 +86,8 @@ const products = [
       precio:180000,
       cantidad:1,
       categoria:"Tubos",
-      imagen: "https://i.ibb.co/CMvgFqZ/tubo.jpg"
+      imagen: "https://i.ibb.co/CMvgFqZ/tubo.jpg",
+      descripcion:"Tubo Láser Co2 RECI. Para Máquinas Pantógrafos de Corte y Grabado Láser.",
   },
   {
       nombre: "Puntero Láser",
@@ -87,7 +96,8 @@ const products = [
       precio:5000,
       cantidad:1,
       categoria:"Otros",
-      imagen: "https://i.ibb.co/3CvgyWm/puntero.jpg"
+      imagen: "https://i.ibb.co/3CvgyWm/puntero.jpg",
+      descripcion:"Puntero Laser 12v",
   },
   {
       nombre: "producto11",
@@ -96,7 +106,8 @@ const products = [
       precio:15000,
       cantidad:1,
       categoria:"Lentes",
-      imagen: "https://i.ibb.co/Rp3ZCx8/lente.jpg"
+      imagen: "https://i.ibb.co/Rp3ZCx8/lente.jpg",
+      descripcion:"Lente para Pantógrafo Laser de CO2, II-VI una de las mejores marcas en lentes y espejos laser, la mejor del mercado.",
   },
   {
       nombre: "Fuente 80w",
@@ -105,7 +116,8 @@ const products = [
       precio:125000,
       cantidad:1,
       categoria:"Fuentes",
-      imagen: "https://i.ibb.co/CvCjDJh/fuente.webp"
+      imagen: "https://i.ibb.co/CvCjDJh/fuente.webp",
+      descripcion:"FUENTE ZYE PARA TUBO LASER. Para Máquinas Pantógrafos Láser de Corte, Marcado y Grabado",
   },
   {
       nombre: "Fuente 50w",
@@ -114,7 +126,8 @@ const products = [
       precio:75000,
       cantidad:1,
       categoria:"Fuentes",
-      imagen: "https://i.ibb.co/CvCjDJh/fuente.webp"
+      imagen: "https://i.ibb.co/CvCjDJh/fuente.webp",
+      descripcion:"FUENTE ZYE PARA TUBO LASER. Para Máquinas Pantógrafos Láser de Corte, Marcado y Grabado",
   },
   {
       nombre: "Tubo 65W",
@@ -123,7 +136,8 @@ const products = [
       precio:110000,
       cantidad:1,
       categoria:"Tubos",
-      imagen: "https://i.ibb.co/CMvgFqZ/tubo.jpg"
+      imagen: "https://i.ibb.co/CMvgFqZ/tubo.jpg",
+      descripcion:"Tubo Láser Co2 RECI. Para Máquinas Pantógrafos de Corte y Grabado Láser.",
   },
   {
       nombre: "Correa 3M",
@@ -132,7 +146,8 @@ const products = [
       precio:3500,
       cantidad:1,
       categoria:"Mecanica",
-      imagen: "https://i.ibb.co/MRcQWQj/correa.jpg"
+      imagen: "https://i.ibb.co/MRcQWQj/correa.jpg",
+      descripcion:"",
   },
   {
       nombre: "Lente D..50mm",
@@ -141,7 +156,8 @@ const products = [
       precio:15000,
       cantidad:1,
       categoria:"Lentes",
-      imagen: "https://i.ibb.co/Rp3ZCx8/lente.jpg"
+      imagen: "https://i.ibb.co/Rp3ZCx8/lente.jpg",
+      descripcion:"Lente para Pantógrafo Laser de CO2, II-VI una de las mejores marcas en lentes y espejos laser, la mejor del mercado.",
   },
   {
       nombre: "Fuente 65w",
@@ -150,7 +166,8 @@ const products = [
       precio:80000,
       cantidad:1,
       categoria:"Fuentes",
-      imagen: "https://i.ibb.co/CvCjDJh/fuente.webp"
+      imagen: "https://i.ibb.co/CvCjDJh/fuente.webp",
+      descripcion:"FUENTE ZYE PARA TUBO LASER. Para Máquinas Pantógrafos Láser de Corte, Marcado y Grabado",
   },
   {
       nombre: "Tubo 50W",
@@ -159,7 +176,8 @@ const products = [
       precio:70000,
       cantidad:1,
       categoria:"Tubos",
-      imagen: "https://i.ibb.co/CMvgFqZ/tubo.jpg"
+      imagen: "https://i.ibb.co/CMvgFqZ/tubo.jpg",
+      descripcion:"Tubo Láser Co2 RECI. Para Máquinas Pantógrafos de Corte y Grabado Láser.",
   },
   {
       nombre: "Polea",
@@ -168,7 +186,8 @@ const products = [
       precio:4000,
       cantidad:1,
       categoria:"Mecanica",
-      imagen: "https://i.ibb.co/Jr8rYHx/polea.jpg"
+      imagen: "https://i.ibb.co/Jr8rYHx/polea.jpg",
+      descripcion:"Polea con paso 3M. Material: Aluminio.",
   },
     {
       nombre: "Lente D..30mm",
@@ -177,6 +196,9 @@ const products = [
       precio: 15000,
       cantidad: 1,
       categoria:"Lentes",
-      imagen: "https://i.ibb.co/Rp3ZCx8/lente.jpg"
+      imagen: "https://i.ibb.co/Rp3ZCx8/lente.jpg",
+      descripcion:"Lente para Pantógrafo Laser de CO2, II-VI una de las mejores marcas en lentes y espejos laser, la mejor del mercado.",
     }
   ];
+
+  export default products
