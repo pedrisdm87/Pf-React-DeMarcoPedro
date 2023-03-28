@@ -4,14 +4,14 @@ import itemListContainer from './Components/ItemListContainer/itemListContainer.
 import navBar from './Components/Navbar/navBar.css';
 import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailContainer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Categorias from './Components/Categorias/Categorias';
+
 
 
 function App() {
   return (
     <BrowserRouter>
     <NavBar/>
-    <Categorias/>
+    
           <Routes>
             
             <Route path="/" element= {<p>Aca deberia ir el componente HOME</p>} />

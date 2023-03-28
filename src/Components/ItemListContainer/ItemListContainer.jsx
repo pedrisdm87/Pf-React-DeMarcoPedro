@@ -23,7 +23,7 @@ function getItemsByCategory(categoria) {
           item => item.categoria===categoria
           );
           resolve(filtro)
-    }, 1000);
+    }, 500);
   });
   return promesa;  
 }
@@ -54,7 +54,8 @@ console.log(categoria);
 )
   
   return (   
-     
+    <>
+    <Categorias/>
       <Flex>
         {products.map((producto) => (
           <Item
@@ -68,7 +69,9 @@ console.log(categoria);
           />
         ))};
       </Flex>
+      </>
   );
 }
+
 
 export default ItemListContainer; 
