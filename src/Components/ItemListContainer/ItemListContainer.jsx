@@ -2,6 +2,8 @@ import React, { useState, useEffect} from "react";
 import Flex from "../Flex/Flex";
 import Item from "../Item/Item";
 import products from "../data/productos"
+import { useParams } from "react-router-dom";
+
 
 function getItems() {
   const promesa = new Promise((resolve)=>{
@@ -14,8 +16,10 @@ function getItems() {
 
 function ItemListContainer() {
 
-
+  
   const [products, setProducts] = useState([]);
+
+console.log(useParams());
 
   useEffect(
     ()=>{
@@ -26,7 +30,8 @@ function ItemListContainer() {
   []
 )
   
-  return (    
+  return (   
+     
       <Flex>
         {products.map((producto) => (
           <Item
