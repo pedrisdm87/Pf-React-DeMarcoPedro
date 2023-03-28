@@ -16,6 +16,7 @@ ul{
   display: flex;
   align-items: center;
   margin-bottom: 10rem;
+  overflow: hidden;
   
 }
 
@@ -26,6 +27,7 @@ a {
   font-size: 2.5rem;
   color: whitesmoke;
   margin-left: 7rem;
+    display: flex;
   
 }
 
@@ -37,6 +39,7 @@ li {
   background-color: #2D3142;
   display:flex;
   align-items: center;
+  overflow: hidden;
   
 }
 
@@ -49,5 +52,6 @@ li :hover {
 
 div{
   display: block;
+  
 }
 
