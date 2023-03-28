@@ -2,9 +2,10 @@ import React, { useState, useEffect} from "react";
 import Flex from "../Flex/Flex";
 import Item from "../Item/Item";
 import products from "../data/productos"
-import { useParams, Route } from "react-router-dom";
+import { useParams, Route, Link } from "react-router-dom";
 import Button from "../Button/Button";
 import './itemDetailContainer.css'
+import ItemListContainer from "../ItemListContainer/ItemListContainer";
 
 
 
@@ -45,7 +46,7 @@ return(
         <h2>{product.categoria}</h2>
         <h3>{product.descripcion}</h3>
         <p>Precio:$ {product.precio}</p>
-        
+        <Link to= "/Productos" element= { <ItemListContainer/>} > <Button>Volver</Button> </Link>
     </div>
 )
 }
