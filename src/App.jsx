@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 
 
+
 function App() {
   return (
     <BrowserRouter>
@@ -15,7 +16,7 @@ function App() {
       
             <Route path="/" element= {<p>Aca deberia ir el componente HOME</p>} />
             <Route path="/Productos" element= { <ItemListContainer/>}/>
-            <Route path="/productos/:id" element={ <ItemDetailContainer/> } />
+            <Route path='/detalle/:id' element={<ItemDetailContainer />} />
 
       </Routes>
     </BrowserRouter>

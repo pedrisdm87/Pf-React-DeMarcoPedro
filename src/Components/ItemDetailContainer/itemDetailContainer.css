@@ -1,27 +1,29 @@
-/* div.flex-container{
+div.detalle{
     display: flex;
     flex-direction: column;
-    
-    
+    align-items: center;
+        
 }
-h1{
+div.detalle h1{
     font-size: 6rem;
     color: #2D3142;
     margin: 1rem;
 }
-h2{
+div.detalle h2{
     font-size: 2.5rem;
     color: #2D3142;;
     
 }
-h3{
-    font-size: 3rem;
+div.detalle h3{
+    font-size: 2.5rem;
     color:#2D3142;
     margin: 1rem;
 }
-
-p{
+div.detalle p{
     font-size: 5rem;
     color: #2D3142;
 }
- */
+
+div.detalle img{
+    width: 500px;
+}
