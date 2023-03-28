@@ -3,6 +3,7 @@ import Flex from "../Flex/Flex";
 import Item from "../Item/Item";
 import products from "../data/productos"
 import { useParams } from "react-router-dom";
+import Categorias from "../Categorias/Categorias";
 
 
 function getItems() {
@@ -14,20 +15,42 @@ function getItems() {
   return promesa;  
 }
 
+
+function getItemsByCategory(categoria) {
+  const promesa = new Promise((resolve)=>{
+        setTimeout(()=>{
+        const filtro = products.filter(
+          item => item.categoria===categoria
+          );
+          resolve(filtro)
+    }, 1000);
+  });
+  return promesa;  
+}
+
+
 function ItemListContainer() {
 
   
   const [products, setProducts] = useState([]);
+  
+  const {categoria} = useParams()
 
-console.log(useParams());
 
-  useEffect(
-    ()=>{
+console.log(categoria);
+
+  useEffect(()=>{
+    if (categoria===undefined){
       getItems().then((respuesta) =>{
         setProducts(respuesta);
     });
-  },
-  []
+  }
+    else{
+      getItemsByCategory(categoria).then((respuesta)=>
+      setProducts(respuesta)
+      );
+    }
+},[categoria]
 )
   
   return (   

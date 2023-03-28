@@ -1,7 +1,7 @@
 const products = [
     {
       nombre: "Tubo 100W",
-      id: "1",
+      id: 1,
       detalle: "Tubo 100W",
       precio: 300000,
       cantidad: 1,
