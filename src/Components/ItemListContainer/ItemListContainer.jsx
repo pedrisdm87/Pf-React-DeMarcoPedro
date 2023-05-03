@@ -1,61 +1,54 @@
-import React, { useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import Flex from "../Flex/Flex";
 import Item from "../Item/Item";
-import products from "../data/productos"
+import products from "../data/productos";
 import { useParams } from "react-router-dom";
 import Categorias from "../Categorias/Categorias";
-
+import Loader from "../Loader/Loader";
 
 function getItems() {
-  const promesa = new Promise((resolve)=>{
-        setTimeout(()=>{
-        resolve(products)
+  const promesa = new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(products);
     }, 1000);
   });
-  return promesa;  
+  return promesa;
 }
-
 
 function getItemsByCategory(categoria) {
-  const promesa = new Promise((resolve)=>{
-        setTimeout(()=>{
-        const filtro = products.filter(
-          item => item.categoria===categoria
-          );
-          resolve(filtro)
+  const promesa = new Promise((resolve) => {
+    setTimeout(() => {
+      const filtro = products.filter((item) => item.categoria === categoria);
+      resolve(filtro);
     }, 500);
   });
-  return promesa;  
+  return promesa;
 }
 
-
 function ItemListContainer() {
-
-  
   const [products, setProducts] = useState([]);
-  
-  const {categoria} = useParams()
 
+  const { categoria } = useParams();
 
-console.log(categoria);
+  console.log(categoria);
 
-  useEffect(()=>{
-    if (categoria===undefined){
-      getItems().then((respuesta) =>{
+  useEffect(() => {
+    if (categoria === undefined) {
+      getItems().then((respuesta) => {
         setProducts(respuesta);
-    });
-  }
-    else{
-      getItemsByCategory(categoria).then((respuesta)=>
-      setProducts(respuesta)
-      );
+      });
+    } else {
+      getItemsByCategory(categoria).then((respuesta) => setProducts(respuesta));
     }
-},[categoria]
-)
+  }, [categoria]);
   
-  return (   
+  if(products.length === 0){
+    
+    return <Loader/>}
+
+  return (
     <>
-    <Categorias/>
+      <Categorias />
       <Flex>
         {products.map((producto) => (
           <Item
@@ -67,11 +60,11 @@ console.log(categoria);
             categoria={producto.categoria}
             id={producto.id}
           />
-        ))};
+        ))}
+        ;
       </Flex>
-      </>
+    </>
   );
 }
 
-
-export default ItemListContainer; 
+export default ItemListContainer;

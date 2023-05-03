@@ -4,7 +4,7 @@ const products = [
       id: 1,
       detalle: "Tubo 100W",
       precio: 300000,
-      cantidad: 1,
+      cantidad: 20,
       categoria:"Tubos",
       imagen: "https://i.ibb.co/CMvgFqZ/tubo.jpg",
       descripcion:"Tubo Láser Co2 RECI. Para Máquinas Pantógrafos de Corte y Grabado Láser.",

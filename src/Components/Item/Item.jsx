@@ -2,15 +2,13 @@ import "./item.css";
 import { useState } from "react";
 import Button from "../Button/Button";
 import { Link } from "react-router-dom";
-import imagenes from "../img/imagenes"
-  
+import imagenes from "../img/imagenes";
+
 
 export default function Item(props) {
-
   return (
     <Link to={`/detalle/${props.id}`}>
       <div id={props.id} className="item-card">
-        
         <div className="item-card_header">
           <h2>{props.detalle}</h2>
         </div>
@@ -22,12 +20,9 @@ export default function Item(props) {
           <h4>$ {props.precio}</h4>
           <small>{props.categoria}</small>
         </div>
-        
+
         <Button>Ver detalle</Button>
-         
       </div>
-      </Link> 
-      
+    </Link>
   );
 }
-
