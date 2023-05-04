@@ -1,16 +1,16 @@
 
-import "./CartContainer.css"; //Cambiar estilos y colores
+import "./CartContainer.css"; //Cambiar estilos y colores minuto 10*clase 12
 
 import { useContext } from 'react'
-import { Context } from '../../Context/Context'
+import { cartContext } from '../../Context/cartContext'
 import { createOrder } from '../services/firestore';
 import { useNavigate } from "react-router-dom";
 /* import FormCheckout from "./FormCheckout"; */
 
 
 function CartContainer() {
-  const context = useContext(Context);
-  const {cart, itemsInCart, removeItem, priceInCart, clearCart} = context;
+  const Context = useContext(Context);
+  const {cart, itemsInCart, removeItem, priceInCart, clearCart} = Context;
  
   let navigate = useNavigate();
 
