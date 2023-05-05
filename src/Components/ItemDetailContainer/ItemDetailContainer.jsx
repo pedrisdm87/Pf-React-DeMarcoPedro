@@ -8,25 +8,15 @@ import "./itemDetailContainer.css";
 import ItemListContainer from "../ItemListContainer/ItemListContainer";
 import Loader from "../Loader/Loader";
 import ItemCount from "../ItemCount/ItemCount";
+import { getSingleItem } from "../services/firestore";
 
 
-function getSingleItem(idURL) {
-  const promesa = new Promise((resolve, reject) => {
-    setTimeout(() => {
-      const encontrado = products.find((item) => {
-        return item.id === Number(idURL);
-      });
-      resolve(encontrado);
-    }, 1000);
-  });
-
-  return promesa;
-}
 
 function ItemDetailContainer(params) {
   const [product, setProduct] = useState([]);
 
   let { id } = useParams();
+  
 
   useEffect(() => {
     getSingleItem(id).then((respuesta) => {
