@@ -9,23 +9,6 @@ import CartContainer from './Components/CartContainer/CartContainer';
 
 
 
-import { initializeApp } from "firebase/app";
-
-// Your web app's Firebase configuration
-const firebaseConfig = {
-  apiKey: "AIzaSyAfnaANbgvEOOvHkbsdhnVhLrfkBhHvXLE",
-  authDomain: "pf-react-demarco.firebaseapp.com",
-  projectId: "pf-react-demarco",
-  storageBucket: "pf-react-demarco.appspot.com",
-  messagingSenderId: "483455549687",
-  appId: "1:483455549687:web:dd5c4c8d956e844a1553f2"
-};
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-
-
-
 
 function App() {
 
