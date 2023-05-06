@@ -55,3 +55,15 @@ const docsData = documents.map((doc) => {
 return docsData;
 
 }
+ export async function createOrder(order) {
+  const collectionOrdersRef = collection( db, "orders");
+  const response = await addDoc (collectionOrdersRef, order);
+  return response.id;
+}
+
+export async function exportData(){
+   const collectionRef = collection(db, "products")
+   for(let item of products){
+    await addDoc(collectionRef, item);
+
+   }}

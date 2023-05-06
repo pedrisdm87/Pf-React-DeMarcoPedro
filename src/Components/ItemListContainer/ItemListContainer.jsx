@@ -4,7 +4,8 @@ import Item from "../Item/Item";
 import { useParams } from "react-router-dom";
 import Categorias from "../Categorias/Categorias";
 import Loader from "../Loader/Loader";
-import { getItems } from "../services/firestore";
+import { getItems, getItemsByCategory } from "../services/firestore";
+
 
 
 
@@ -27,10 +28,10 @@ function ItemListContainer() {
        setProducts(respuesta));
     }
   }, [categoria]);
-  
+
   if(products.length === 0){
-    
-    return <Loader/>}
+    return <Loader/>;
+  }
 
   return (
     <>

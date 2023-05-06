@@ -1,48 +1,63 @@
 import { createContext, useState } from "react";
+//1 crearlo con crateContext
+const cartContext =createContext({cart : [] });
 
-export const cartContext = createContext();
-
-export function CartContextProvider(props){
+//crate el Provider
+function CartProvider(props) {
     const [cart, setCart] = useState([]);
+    const [cartItemId, setCartItemId] = useState(0);
+  
+    function getNextCartItemId() {
+      setCartItemId((prevId) => prevId + 1);
+      return cartItemId;
+    }
+  
+    function addItem(product, countFromCounter) {
+      const existingItemIndex = cart.findIndex((item) => item.id === product.id);
+      if (existingItemIndex !== -1) {
+        const newCart = [...cart];
+        newCart[existingItemIndex].count += countFromCounter;
+        setCart(newCart);
+      } else {
+        const newCartItem = { ...product, id: getNextCartItemId(), count: countFromCounter };
+        setCart([...cart, newCartItem]);
+      }
+    }
+    function isItemInCart(id){
 
-    function addToCart(product, count){
-        let newCart = [...cart];
-        product.count = count;
-        newCart.push(product);
+        return  cart.some((itemInCart)=> itemInCart.id === id);
+
+    }
+    function getCountInCart(id){
+        const item = cart.find((itemInCart) =>itemInCart.id !== id);
+        return item !== undefined ? item.count : 0;
+
+    }
+
+    function totalItems(){
+        let totalItems = 0;
+        cart.forEach(item=> totalItems +=item.count);
+        return totalItems;
+    }
+    function totalPriceInCart(){
+        let totalPYC = 0;
+        cart.forEach((product) => (totalPYC = totalPYC + (product.price * product.count)));
+        return totalPYC;
+    }
+    function removeItem(id){
+        const newCart = cart.filter((product)=> product.id !==id);
         setCart(newCart)
     }
+    function clearCart() {
+      setCart([]);
+    }
+     
 
-    function itemsInCart(){
-        let total = 0
-        cart.forEach( (itemInCart) => (total = total + itemInCart.count));
-        return total;
-    }
-    
-
-    function priceInCart(){
-        let totalPrice = 0
-        cart.forEach( (itemInCart) => (totalPrice = totalPrice + (itemInCart.price*itemInCart.count)));
-        return totalPrice
-    }
-    function clearCart(){
-        setCart([])
-    }
-    function removeItem(itemId){
-        setCart(cart.filter(product => product.id !== itemId))
-    }
-    const value = {
-        addToCart,
-        itemsInCart,
-        cart,
-        priceInCart,
-        clearCart,
-        removeItem,
-        
-    }
-    
     return(
-        <cartContext.Provider value = {value}>
+        <cartContext.Provider value={{cart : cart, addItem, isItemInCart, removeItem, getCountInCart, totalItems, totalPriceInCart, clearCart }}>
             {props.children}
         </cartContext.Provider>
     )
 }
+
+export {cartContext, CartProvider};
