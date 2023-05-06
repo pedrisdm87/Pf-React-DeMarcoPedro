@@ -1,0 +1,43 @@
+div.buttton{
+    padding: 15px 15px;
+    color: white;
+    max-width: 150px;
+    background-color: #2D3142;
+    border-radius:  4rem; 
+    border: none;
+    margin: 5px 15px;
+    cursor: pointer;
+    margin: 5px auto;
+    display: flex;
+    align-items: center;
+    font-size:2rem ;
+}
+div.span{
+    padding: 15px 15px;
+    color: whitesmoke;
+    max-width: 150px;
+    background-color: #2D3142;
+    border-radius:  4rem; 
+    border: none;
+    margin: 5px 15px;
+    cursor: pointer;
+    margin: 5px auto;
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    
+}
+.buttton :hover {
+    color: #ef8354;
+    transition: 0.5s;
+  }
+
+button{
+    background-color: #2D3142;
+    color: whitesmoke;
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    margin: 0.5rem;
+    cursor: pointer;
+}

@@ -10,6 +10,9 @@ function Categorias(props) {
             <Link to="/Productos">Todos</Link>
           </li>
           <li>
+            <Link to="/categoria/Controladoras">Controladoras</Link>{" "}
+          </li>
+          <li>
             <Link to="/categoria/Tubos">Tubos</Link>{" "}
           </li>
           <li>

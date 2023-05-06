@@ -3,8 +3,8 @@ import "./CartContainer.css"; //Cambiar estilos y colores minuto 10*clase 12
 
 import { useContext } from 'react'
 import { cartContext } from '../../Context/cartContext'
-import { createOrder } from '../services/firestore';
-
+/* import { createOrder } from '../services/firestore';
+ */
 import { useNavigate } from "react-router-dom";
 import FormCheckout from "./FormCheckout";
 
@@ -23,9 +23,9 @@ function CartContainer() {
       total : priceInCart(),
     };
 
-    const orderId = await createOrder(order);
+/*     const orderId = await createOrder(order);
     navigate(`/checkout/${orderId}`);
-    clearCart();
+    clearCart(); */
   }
   
   if (cart.length === 0)

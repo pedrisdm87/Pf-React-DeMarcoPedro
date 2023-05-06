@@ -1,6 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore, collection, getDocs , doc, getDoc, query, where} from "firebase/firestore"
 
+
 const firebaseConfig = {
   apiKey: "AIzaSyAfnaANbgvEOOvHkbsdhnVhLrfkBhHvXLE",
   authDomain: "pf-react-demarco.firebaseapp.com",
@@ -54,7 +55,7 @@ const docsData = documents.map((doc) => {
 
 return docsData;
 
-}
+}/* 
  export async function createOrder(order) {
   const collectionOrdersRef = collection( db, "orders");
   const response = await addDoc (collectionOrdersRef, order);
@@ -66,4 +67,4 @@ export async function exportData(){
    for(let item of products){
     await addDoc(collectionRef, item);
 
-   }}
+   }} */

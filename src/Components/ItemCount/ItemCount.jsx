@@ -1,4 +1,6 @@
 import React, {useState} from 'react'
+import "./ItemCount.css"
+
 
 export default function ItemCount(props) {
     
@@ -10,7 +12,7 @@ export default function ItemCount(props) {
            setCount(count + 1)
         }
         else{
-            alert("no esa cantidad de productos"); //cambiar textos
+            alert("No hay stock disponible en estos momentos."); 
         }
     }
     function handleSubstract(){
@@ -18,14 +20,14 @@ export default function ItemCount(props) {
            setCount(count - 1)
         }
         else{
-            alert("no se puede tener menos de 1 producto");//cambiar textos
+            alert("Debes tener al menos 1 producto.");
         }
     }
   
 
     return (
-    <div  >
-        <button onClick={handleSubstract}> - </button>
+    <div className='buttton'>
+        <button  onClick={handleSubstract}> - </button>
         <span> {count} </span>
         <button onClick={handleAdd}> + </button> 
         <button onClick={()=>props.onAddToCart(count)} > Comprar </button>

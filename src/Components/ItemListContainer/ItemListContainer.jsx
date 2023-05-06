@@ -15,7 +15,6 @@ function ItemListContainer() {
 
   const { categoria } = useParams();
 
-  console.log(categoria);
 
   useEffect(() => {
     if (categoria === undefined) {
