@@ -32,7 +32,7 @@ function ItemDetailContainer(params) {
     <div className="detalle">
       <img src={product.imagen} />
       <h1>{product.nombre}</h1>
-      <h2>{product.categoria}</h2>
+      <h2>{product.category}</h2>
       <h3>{product.descripcion}</h3>
       <p>Precio:$ {product.precio}</p>
       <ItemCount cantidad={product.cantidad}/>

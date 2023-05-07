@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-function Categorias(props) {
+function Category(props) {
   return (
     <nav>
       <div className="container">
@@ -10,22 +10,22 @@ function Categorias(props) {
             <Link to="/Productos">Todos</Link>
           </li>
           <li>
-            <Link to="/categoria/Controladoras">Controladoras</Link>{" "}
+            <Link to="/category/Controladoras">Controladoras</Link>{" "}
           </li>
           <li>
-            <Link to="/categoria/Tubos">Tubos</Link>{" "}
+            <Link to="/category/Tubos">Tubos</Link>{" "}
           </li>
           <li>
-            <Link to="/categoria/Fuentes">Fuentes</Link>
+            <Link to="/category/Fuentes">Fuentes</Link>
           </li>
           <li>
-            <Link to="/categoria/Lentes">Lentes</Link>
+            <Link to="/category/Lentes">Lentes</Link>
           </li>
           <li>
-            <Link to="/categoria/Mecanica">Mecanica</Link>
+            <Link to="/category/Mecanica">Mecanica</Link>
           </li>
           <li>
-            <Link to="/categoria/Otros">Otros</Link>
+            <Link to="/category/Otros">Otros</Link>
           </li>
         </ul>
       </div>
@@ -33,4 +33,4 @@ function Categorias(props) {
   );
 }
 
-export default Categorias;
+export default Category;

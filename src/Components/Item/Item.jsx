@@ -18,7 +18,7 @@ export default function Item(props) {
 
         <div className="item-card_detail">
           <h4>$ {props.precio}</h4>
-          <small>{props.categoria}</small>
+          <small>{props.category}</small>
         </div>
 
         <Button>Ver detalle</Button>
