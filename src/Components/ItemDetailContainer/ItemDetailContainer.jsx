@@ -9,6 +9,7 @@ import ItemListContainer from "../ItemListContainer/ItemListContainer";
 import Loader from "../Loader/Loader";
 import ItemCount from "../ItemCount/ItemCount";
 import { getSingleItem } from "../services/firestore";
+import ItemDetail from "../ItemDetail/ItemDetail";
 
 
 
@@ -29,18 +30,19 @@ function ItemDetailContainer(params) {
     return <Loader/>}
 
   return (
-    <div className="detalle">
-      <img src={product.imagen} />
-      <h1>{product.nombre}</h1>
-      <h2>{product.category}</h2>
-      <h3>{product.descripcion}</h3>
-      <p>Precio:$ {product.precio}</p>
-      <ItemCount cantidad={product.cantidad}/>
-      <Link to="/Productos" element={<ItemListContainer />}>
-        {" "}
-        <Button>Volver</Button>{" "}
-      </Link>
-    </div>
+    <div>
+    <Flex>
+    <ItemDetail
+    key={product.id}
+    title={product.nombre}
+    price={product.precio}
+    category={product.category}
+    descripcion={product.descripcion}
+    stock={product.stock}
+    img ={product.imagen}/>
+
+</Flex>
+</div>
   );
 }
 
