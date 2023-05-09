@@ -1,7 +1,7 @@
 import ItemCount from "../ItemCount/ItemCount";
 import { useContext, useState } from "react";
-/* import { cartContext } from "../../storeContext/cartContext";
- */import { Link } from "react-router-dom";
+import { cartContext } from "../../Context/cartContext";
+import { Link } from "react-router-dom";
 import ItemListContainer from "../ItemListContainer/ItemListContainer";
 import Button from "../Button/Button";
 
@@ -13,8 +13,8 @@ import Button from "../Button/Button";
 function ItemDetail(props){
   
 
-/*   const{addItem, getCountInCart} = useContext(cartContext);
- */
+  const{addItem, getCountInCart} = useContext(cartContext);
+ 
 
   const [addedToCart, setAddedToCart] = useState(false);
 
@@ -22,12 +22,12 @@ function ItemDetail(props){
   function onAddToCart(count){
     setAddedToCart (count);
   
-/*     addItem(props, count) */
+     addItem(props, count)
 
 }
-/*   const countInCart = getCountInCart(props.id);
+ const countInCart = getCountInCart(props.id);
   console.log(countInCart);
- */
+ 
 
     return(
     <div className="detalle">
