@@ -34,12 +34,12 @@ function ItemDetailContainer(params) {
     <Flex>
     <ItemDetail
     key={product.id}
-    title={product.nombre}
-    price={product.precio}
+    nombre={product.nombre}
+    precio={product.precio}
     category={product.category}
     descripcion={product.descripcion}
-    stock={product.stock}
-    img ={product.imagen}/>
+    cantidad={product.cantidad}
+    imagen ={product.imagen}/>
 
 </Flex>
 </div>

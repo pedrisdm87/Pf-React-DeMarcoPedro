@@ -44,7 +44,7 @@ export async function getItemsByCategory(categoryid){
   const productsRef = collection(db, "products");
 
 
-const q = query (productsRef, where ("category", "==","categoryid" )) //crear consulta a productosRef CUANDO se cumpla Where()
+const q = query (productsRef, where ("category", "==",categoryid)) //crear consulta a productosRef CUANDO se cumpla Where()
 
 const productsSnap = await getDocs(q);
 const documents = productsSnap.docs;
