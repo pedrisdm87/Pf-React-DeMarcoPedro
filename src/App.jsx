@@ -8,6 +8,7 @@ import Inicio from './Components/Inicio/Inicio';
 import CartContainer from './Components/CartContainer/CartContainer';
 import { CartProvider } from './Context/cartContext';
 import Servicios from './Components/Servicios/Servicios';
+import Nosotros from './Components/Nosotros/Nosotros';
 
 
 
@@ -25,6 +26,7 @@ function App() {
             
             <Route path="/" element= {<Inicio/>} />
             <Route path="/Servicios" element= {<Servicios/>} />
+            <Route path="/Nosotros" element= {<Nosotros/>} />
             <Route path="/Productos" element= { <ItemListContainer/>}/>
             <Route path='/detalle/:id' element={<ItemDetailContainer />} />
             <Route path="/category/:categoryid" element = {<ItemListContainer/>}/>
