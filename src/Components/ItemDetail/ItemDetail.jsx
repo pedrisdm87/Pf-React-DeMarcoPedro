@@ -26,7 +26,9 @@ function ItemDetail(props) {
       <h3>{props.descripcion}</h3>
       <p>Precio:$ {props.precio}</p>
       <ItemCount onAddToCart={onAddToCart} cantidad={props.cantidad} />
-
+      <Link to="/cart"> 
+        <Button>Ir al Carrito</Button>
+      </Link>
       <Link to="/productos">
         <Button>Volver</Button>
       </Link>
