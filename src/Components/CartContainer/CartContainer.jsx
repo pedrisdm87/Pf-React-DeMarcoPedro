@@ -4,8 +4,7 @@ import "./CartContainer.css"; //Cambiar estilos y colores minuto 10*clase 12
 import { useContext } from 'react'
 import { cartContext } from '../../Context/cartContext'
 /* import { createOrder } from '../services/firestore';
- */
-import { useNavigate } from "react-router-dom";
+ */import { useNavigate } from "react-router-dom";
 import FormCheckout from "./FormCheckout";
 
 
@@ -18,14 +17,14 @@ function CartContainer() {
   async function handleCheckOut(userData){
     const order = {
       items : cart,
-      /* buyer : userData, */
+      buyer : userData,
       date : new Date(),
       total : priceInCart(),
     };
 
-/*     const orderId = await createOrder(order);
+const orderId = await createOrder(order);
     navigate(`/checkout/${orderId}`);
-    clearCart(); */
+    clearCart();
   }
   
   if (cart.length === 0)
@@ -75,7 +74,7 @@ function CartContainer() {
       <div className="cartList_detail">
       <h4>Tenes un total de {itemsInCart()} items en tu carrito</h4>
       <h4>El total de tu compra es de ${priceInCart()}</h4>
-      {/* <FormCheckout onCheckout={handleCheckOut}/> */}
+      {<FormCheckout onCheckout={handleCheckOut}/>}
 
       </div>
       

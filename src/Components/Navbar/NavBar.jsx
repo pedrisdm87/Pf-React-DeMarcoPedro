@@ -34,9 +34,7 @@ function NavBar(props) {
             <Link to="/encontranos">Encontranos</Link>
           </li>
           <li>
-            <Link to="/cart">
-              {" "}
-              <CartWidget/>{" "}
+            <Link to="/cart"> {" "} <CartWidget/>{" "}
             </Link>
           </li>
         </ul>
