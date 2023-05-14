@@ -1,17 +1,14 @@
-
 import "./CartContainer.css"; //Cambiar estilos y colores minuto 10*clase 12
-
 import { useContext } from 'react'
 import { cartContext } from '../../Context/cartContext'
-/* import { createOrder } from '../services/firestore';
- */
+import { createOrder } from '../services/firestore';
 import { useNavigate } from "react-router-dom";
 import FormCheckout from "./FormCheckout";
 
 
 function CartContainer() {
-  const Context = useContext(Context);
-  const {cart, itemsInCart, removeItem, priceInCart, clearCart} = Context;
+  const context = useContext(cartContext);
+  const {cart, itemsInCart, removeItem, priceInCart, clearCart} = context;
  
   let navigate = useNavigate();
 
@@ -56,15 +53,15 @@ const orderId = await createOrder(order);
               <td>
                 <img height={50} src={item.img} alt={item.title} />
               </td>
-              <td>{item.title}</td>
-              <td>$ {item.price}</td>
-              <td>{item.count}</td>
+              <td>{item.name}</td>
+              <td>$ {item.precio}</td>
+              <td>{item.cantidad}</td>
               <td>
                 <button  onClick={()=>removeItem(item.id)}>  
                   X
                 </button>
               </td>
-              <th>${item.count * item.price} </th>
+              <th>${item.cantidad * item.precio} </th>
               
             </tr>
             
