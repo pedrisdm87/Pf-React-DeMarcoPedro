@@ -4,7 +4,8 @@ import "./CartContainer.css"; //Cambiar estilos y colores minuto 10*clase 12
 import { useContext } from 'react'
 import { cartContext } from '../../Context/cartContext'
 /* import { createOrder } from '../services/firestore';
- */import { useNavigate } from "react-router-dom";
+ */
+import { useNavigate } from "react-router-dom";
 import FormCheckout from "./FormCheckout";
 
 

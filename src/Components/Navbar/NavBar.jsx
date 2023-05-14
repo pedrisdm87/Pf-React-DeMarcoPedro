@@ -21,7 +21,7 @@ function NavBar(props) {
             <Link to="/productos">Productos</Link>
           </li>
           <li>
-            <Link to="/servicios">Servicios</Link>{" "}
+            <Link to="/servicios">Servicios</Link>
           </li>
           <li>
             <Link to="/nosotros">Nosotros</Link>
