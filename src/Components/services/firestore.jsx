@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore, collection, getDocs , doc, getDoc, query, where} from "firebase/firestore"
-
+import { getFirestore, collection,addDoc, getDocs , doc, getDoc, query, where} from "firebase/firestore"
+import products from "../data/productos";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAfnaANbgvEOOvHkbsdhnVhLrfkBhHvXLE",
@@ -66,5 +66,4 @@ export async function exportData(){
    const collectionRef = collection(db, "products")
    for(let item of products){
     await addDoc(collectionRef, item);
-
    }}

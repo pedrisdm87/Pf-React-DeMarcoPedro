@@ -1,5 +1,5 @@
-import "./CartContainer.css"; //Cambiar estilos y colores minuto 10*clase 12
 import { useContext } from 'react'
+import "./CartContainer.css";
 import { cartContext } from '../../Context/cartContext'
 import { createOrder } from '../services/firestore';
 import { useNavigate } from "react-router-dom";
@@ -8,7 +8,7 @@ import FormCheckout from "./FormCheckout";
 
 function CartContainer() {
   const context = useContext(cartContext);
-  const {cart, itemsInCart, removeItem, priceInCart, clearCart} = context;
+  const {cart, itemsInCart, removeItem, totalPriceInCart, clearCart} = context;
  
   let navigate = useNavigate();
 
@@ -17,7 +17,7 @@ function CartContainer() {
       items : cart,
       buyer : userData,
       date : new Date(),
-      total : priceInCart(),
+      total : totalPriceInCart(),
     };
 
 const orderId = await createOrder(order);
@@ -53,7 +53,7 @@ const orderId = await createOrder(order);
               <td>
                 <img height={50} src={item.img} alt={item.title} />
               </td>
-              <td>{item.name}</td>
+              <td>{item.nombre}</td>
               <td>$ {item.precio}</td>
               <td>{item.cantidad}</td>
               <td>
@@ -70,8 +70,8 @@ const orderId = await createOrder(order);
       </table>
 
       <div className="cartList_detail">
-      <h4>Tenes un total de {itemsInCart()} items en tu carrito</h4>
-      <h4>El total de tu compra es de ${priceInCart()}</h4>
+{/*       <h4>Tenes un total de {itemsInCart()} items en tu carrito</h4>
+ */}      <h4>El total de tu compra es de ${totalPriceInCart()}</h4>
       {<FormCheckout onCheckout={handleCheckOut}/>}
 
       </div>

@@ -9,21 +9,19 @@ import CartContainer from './Components/CartContainer/CartContainer';
 import { CartProvider } from './Context/cartContext';
 import Servicios from './Components/Servicios/Servicios';
 import Nosotros from './Components/Nosotros/Nosotros';
+import { exportData } from './Components/services/firestore';
 
 
 
 function App() {
 
-
-
-
   return (
+    <>
     <CartProvider>
     <BrowserRouter>
     <NavBar/>
     
           <Routes>
-            
             <Route path="/" element= {<Inicio/>} />
             <Route path="/Servicios" element= {<Servicios/>} />
             <Route path="/Nosotros" element= {<Nosotros/>} />
@@ -35,6 +33,7 @@ function App() {
       
     </BrowserRouter>
     </CartProvider>
+    </>
   )
 
 }

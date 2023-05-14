@@ -1,4 +1,6 @@
 import { createContext, useState } from "react";
+
+
 //1 crearlo con crateContext
 const cartContext =createContext({cart : [] });
 
