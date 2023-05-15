@@ -60,10 +60,10 @@ export default function FormCheckout({ onCheckout }) {
           required 
           onChange={handleInputChange} />
         </div>
-        <button onClick={onSubmit} type="submit">
+        <button className="button3" onClick={onSubmit} type="submit">
           Crear orden
         </button>
-        <button onClick={clearFormData}>Cancelar</button>
+        <button className="button3" onClick={clearFormData}>Cancelar</button>
       </form>
     </>
   );

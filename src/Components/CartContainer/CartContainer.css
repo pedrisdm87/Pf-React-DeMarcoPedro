@@ -13,7 +13,7 @@
     margin: 8px auto;
   }
   .background{
-    background-color: #2D3142;
+    background-color:gray;
   }
   .cartList_row{
     line-height: 56px;
@@ -25,25 +25,52 @@
     line-height: 1.5em;
     width: 100%;
   }
-  .btn{
-    padding: 5px 15px;
-    color: rgb(15, 16, 15);
-    background-color: rgb;
-    border-radius: 4px;
+  .button3 {
+    padding: 15px 15px;
+    color: white;
+    max-width: 150px;
+    background-color: #2D3142;
+    border-radius:  4rem; 
     border: none;
+    margin: 5px 15px;
     cursor: pointer;
+    margin: 5px auto;
+    display: flex;
+    align-items: center;
+    font-size:2rem ;
   }
+
   
-  .btn:hover {
-    box-shadow: 0px 5px 3px #2D3142;
+  
+  .button3:hover{
+    box-shadow: 0px 4px 5px #000000;
   }
 
   h1{
     color: #2D3142;
     text-align: center;
-    text-size:2rem;
+    font-size: 3rem;
+    margin: 2rem;
   }
  th{
     color: #2D3142;
     font-size: 2rem;
+  }
+
+  td{
+    font-size: 2rem;
+    color:#2D3142;
+  }
+
+  h4{
+    color: #2D3142;
+    text-align: center;
+    font-size: 3rem;
+    margin: 2rem;
+  }
+
+  label{
+    font-size: 2rem;
+    color:#2D3142;
+    margin: 1.5rem;
   }
