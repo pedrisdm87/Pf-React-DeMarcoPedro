@@ -43,7 +43,7 @@ function CartProvider(props) {
     }
     function totalPriceInCart(){
         let totalPYC = 0;
-        cart.forEach((product) => (totalPYC = totalPYC + (product.price * product.count)));
+        cart.forEach((product) => (totalPYC = totalPYC + (product.precio * product.count)));
         return totalPYC;
     }
     function removeItem(id){

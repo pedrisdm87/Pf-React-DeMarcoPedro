@@ -51,7 +51,7 @@ const orderId = await createOrder(order);
           {cart.map((item) => (
             <tr key={item.id} className="cartList_row">
               <td>
-                <img height={50} src={item.img} alt={item.title} />
+                <img height={50} src={item.imagen} alt={item.nombre} />
               </td>
               <td>{item.nombre}</td>
               <td>$ {item.precio}</td>
